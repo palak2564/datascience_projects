@@ -1,0 +1,74 @@
+# Setup Instructions for Car Color Detection System
+
+## Step 1: Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+## Step 2: Download YOLO Model Files
+
+You need to download the following files:
+
+1. **YOLOv3 Weights** (237 MB)
+   - Download from: https://pjreddie.com/media/files/yolov3.weights
+   - Or use: `wget https://pjreddie.com/media/files/yolov3.weights`
+
+2. **YOLOv3 Configuration**
+   - Download from: https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg
+   - Or create it manually (see yolov3.cfg in this directory)
+
+3. **COCO Class Names**
+   - Download from: https://github.com/pjreddie/darknet/blob/master/data/coco.names
+   - Or create it manually (see coco.names in this directory)
+
+## Step 3: Organize Files
+
+Create a folder structure like this:
+
+```
+car_color_detection/
+├── main_app.py
+├── requirements.txt
+├── setup_instructions.txt
+├── model_files/
+│   ├── yolov3.weights
+│   ├── yolov3.cfg
+│   └── coco.names
+└── sample_images/
+    └── (your test images)
+```
+
+## Step 4: Run the Application
+
+```bash
+python main_app.py
+```
+
+## How to Use the Application
+
+1. **Load Model**: Click "Load YOLO Model" and select:
+   - First: yolov3.cfg file
+   - Second: yolov3.weights file
+   - Third: coco.names file
+
+2. **Select Image**: Click "Select Image" and choose an image with cars
+
+3. **Detect Cars**: Click "Detect Cars" to perform detection
+
+4. **Save Result**: Click "Save Result" to save the output image
+
+## Expected Output
+
+- Blue cars will have RED bounding boxes
+- Other colored cars will have BLUE bounding boxes
+- People will have GREEN bounding boxes
+- Summary will show: Total cars, Blue cars, Other cars, and People count
+
+## Troubleshooting
+
+If you get an error:
+- Make sure all model files are downloaded correctly
+- Check that OpenCV is installed properly
+- Verify image file paths are correct
+- Ensure you have enough RAM (at least 2GB free)
