@@ -1,0 +1,23 @@
+# Animal Detection Project — Dependencies
+# =========================================
+# Install with: pip install -r requirements.txt
+#
+# Python 3.8+ recommended (tested on 3.10)
+
+# Core ML / detection
+ultralytics>=8.0.0        # YOLOv8 — the main model framework
+opencv-python>=4.8.0      # Image & video processing
+numpy>=1.24.0             # Array math
+
+# GUI
+Pillow>=10.0.0            # PIL for tkinter image display
+# tkinter comes with Python standard library — no install needed
+
+# Visualization (for notebook)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0            # optional — for interactive charts
+
+# Utilities
+pandas>=2.0.0             # For log export / CSV handling
+tqdm>=4.65.0              # Progress bars in CLI mode

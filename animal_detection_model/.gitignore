@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Model weights (too large for Git — download on first run)
+*.pt
+*.pth
+*.weights
+*.onnx
+
+# Outputs
+outputs/*.jpg
+outputs/*.png
+outputs/*.mp4
+outputs/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS stuff
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sample images (usually too large for Git)
+# Uncomment if you want to exclude them:
+# samples/
+
+# Logs
+*.log
+detection_log*.csv
