@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+
+# Model files (large — regenerate with train.py)
+models/lbph_model.yml
+models/label_map.pkl
+
+# Dataset photos (privacy — don't push student faces to git)
+dataset/known_faces/*/
+!dataset/known_faces/.gitkeep
+
+# Outputs
+outputs/*.xlsx
+outputs/*.csv
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
