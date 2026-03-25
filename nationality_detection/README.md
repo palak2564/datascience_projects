@@ -1,10 +1,10 @@
-# 🌐 Nationality Detection System
+# Nationality Detection System
 
 > **Internship Project Extension** — Predicts nationality from face images with conditional attribute analysis (emotion, age, dress colour) based on nationality group.
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 Given a face image, the system:
 1. **Predicts nationality** using DeepFace race/ethnicity analysis
@@ -12,17 +12,17 @@ Given a face image, the system:
 
 | Nationality | Predictions Made |
 |---|---|
-| 🇮🇳 Indian | Nationality + Emotion + Age + **Dress Colour** |
-| 🇺🇸 American | Nationality + Emotion + Age |
-| 🌍 African | Nationality + Emotion + **Dress Colour** |
-| 🌐 Other | Nationality + Emotion only |
+| Indian | Nationality + Emotion + Age + **Dress Colour** |
+| American | Nationality + Emotion + Age |
+| African | Nationality + Emotion + **Dress Colour** |
+| Other | Nationality + Emotion only |
 
 3. Displays results in a structured GUI output panel
 4. Supports saving results and exporting CSV logs
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 nationality_detection/
@@ -48,7 +48,7 @@ nationality_detection/
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ```bash
 pip install -r requirements.txt
@@ -57,7 +57,7 @@ python download_models.py   # Age model ~44 MB; DeepFace auto-downloads on first
 
 ---
 
-## 🖥 Running
+## Running
 
 ### GUI Mode
 ```bash
@@ -84,7 +84,7 @@ python cli.py --image face.jpg --csv log.csv
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### Stage 1: Face Detection
 OpenCV Haar Cascade — locates largest face in frame. Used for:
@@ -101,12 +101,12 @@ Returns confidence % per ethnicity group.
 
 **Raw labels → nationality mapping:**
 ```
-indian          → Indian  🇮🇳
-black           → African  🌍
-white           → American  🇺🇸
-asian           → East Asian  🌏
-middle eastern  → Middle Eastern  🌍
-latino hispanic → Latino/Hispanic  🌎
+indian          → Indian  
+black           → African 
+white           → American
+asian           → East Asian
+middle eastern  → Middle Eastern 
+latino hispanic → Latino/Hispanic 
 ```
 
 ### Stage 3: Dress Colour — KMeans Clustering
@@ -127,7 +127,7 @@ TASK_RULES = {
 
 ---
 
-## 🎨 GUI Design
+## GUI Design
 
 Aesthetic: **editorial / travel-document**
 - Warm parchment background (`#f0ece4`)
@@ -139,7 +139,7 @@ Aesthetic: **editorial / travel-document**
 
 ---
 
-## 📦 Datasets Used
+## Datasets Used
 
 | Model | Dataset |
 |---|---|
@@ -151,7 +151,7 @@ Aesthetic: **editorial / travel-document**
 
 ---
 
-## ⚠ Limitations
+## Limitations
 
 - Race/ethnicity prediction is probabilistic — not always accurate
 - Dress colour requires torso to be visible in frame
@@ -160,7 +160,7 @@ Aesthetic: **editorial / travel-document**
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Python 3.10**
 - **DeepFace** — race + emotion + age
