@@ -1,6 +1,5 @@
-# 😴 Drowsiness Detection System
+# Drowsiness Detection System
 
-> **Internship Project Extension** — Real-time drowsiness detection for vehicle safety.
 > Detects multiple people, marks sleeping ones in RED, predicts their age, fires popup alerts.
 
 ---
@@ -18,7 +17,7 @@ Driver/passenger drowsiness causes thousands of road accidents annually. This sy
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 drowsiness_detection/
@@ -45,7 +44,7 @@ drowsiness_detection/
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ```bash
 pip install -r requirements.txt
@@ -62,7 +61,7 @@ Without it, the system falls back to OpenCV eye cascade (still works, slightly l
 
 ---
 
-## 🖥 Running the App
+## Running the App
 
 ### GUI Mode
 ```bash
@@ -88,7 +87,7 @@ python cli.py --image photo.jpg --ear 0.22 --csv log.csv
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### Stage 1: Face Detection
 OpenCV Haar Cascade Classifier (`haarcascade_frontalface_default.xml`) — fast and reliable for frontal faces in vehicle dashcam scenarios.
@@ -127,7 +126,7 @@ If EAR < threshold → person marked as sleeping.
 
 ---
 
-## 🚨 Popup Alert
+## Popup Alert
 
 When sleeping people are detected, a modal popup fires automatically:
 - Bold red warning design
@@ -138,7 +137,7 @@ When sleeping people are detected, a modal popup fires automatically:
 
 ---
 
-## ⚙ Configuration
+## Configuration
 
 Edit `config.py`:
 
@@ -151,7 +150,7 @@ Edit `config.py`:
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 | Metric | Value |
 |---|---|
@@ -163,7 +162,7 @@ See `drowsiness_notebook.ipynb` for full EAR threshold analysis, ROC curves, and
 
 ---
 
-## ⚠ Limitations
+## Limitations
 
 - Haar cascade may miss faces in low light or side profiles
 - EAR approach requires frontal/near-frontal face view
@@ -172,7 +171,7 @@ See `drowsiness_notebook.ipynb` for full EAR threshold analysis, ROC curves, and
 
 ---
 
-## 🔮 Extensions
+## Extensions
 
 - Add head pose estimation to catch nodding (secondary drowsiness signal)
 - Replace Haar with MTCNN for better multi-face detection
@@ -181,7 +180,7 @@ See `drowsiness_notebook.ipynb` for full EAR threshold analysis, ROC curves, and
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Python 3.10**
 - **OpenCV** — Haar cascade detection, DNN age model
