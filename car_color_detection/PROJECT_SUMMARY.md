@@ -261,8 +261,6 @@ This project demonstrates:
 * Professional documentation
 * Reproducible results
 
-**Perfect for internship submission!**
-
 ## Repository Information
 
 **Name**: car-color-detection
