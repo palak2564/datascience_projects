@@ -1,11 +1,11 @@
-# 🎓 Smart Attendance System
+#  Smart Attendance System
 
 > **Internship Project Extension** — Face recognition + emotion detection for automated classroom attendance.
 > Runs during a configured time window, marks students present/absent, exports Excel + CSV report.
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 Manual roll calls are slow, error-prone, and waste class time. This system automates attendance using a webcam:
 
@@ -17,7 +17,7 @@ Manual roll calls are slow, error-prone, and waste class time. This system autom
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 attendance_system/
@@ -50,7 +50,7 @@ attendance_system/
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ```bash
 pip install -r requirements.txt
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📸 Step 1: Collect Training Data
+## Step 1: Collect Training Data
 
 Create a folder per student inside `dataset/known_faces/`. Each folder should have **20-50 photos** of that student.
 
@@ -83,7 +83,7 @@ This launches an interactive session to capture photos from your webcam.
 
 ---
 
-## 🏋️ Step 2: Train the Model
+## Step 2: Train the Model
 
 ```bash
 python train.py
@@ -100,7 +100,7 @@ python train.py --no-augment                    # skip data augmentation
 
 ---
 
-## ▶ Step 3: Run Attendance
+## Step 3: Run Attendance
 
 ```bash
 python attendance_system.py
@@ -124,7 +124,7 @@ python attendance_system.py --source classroom_recording.mp4 --demo
 
 ---
 
-## 📊 Output Report
+## Output Report
 
 Reports are saved in `outputs/` as:
 - `attendance_YYYY-MM-DD.xlsx` — formatted Excel with color coding
@@ -144,7 +144,7 @@ Reports are saved in `outputs/` as:
 
 ---
 
-## 🧠 How It Works
+## How It Works::
 
 ### Face Detection
 Haar Cascade Classifier (OpenCV built-in) — fast, reliable for frontal faces in decent lighting.
@@ -177,7 +177,7 @@ Outside this window, the system prints the time until next window and exits.
 
 ---
 
-## ⚙ Configuration
+## Configuration
 
 Edit `config.py`:
 
@@ -192,7 +192,7 @@ Edit `config.py`:
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ```bash
 python -m pytest tests/ -v
@@ -206,7 +206,7 @@ Tests cover:
 
 ---
 
-## 📈 Model Accuracy
+## Model Accuracy
 
 | Dataset size | LBPH Accuracy (approx) |
 |---|---|
@@ -218,7 +218,7 @@ See `attendance_notebook.ipynb` for full accuracy analysis and per-student break
 
 ---
 
-## ⚠ Limitations
+## Limitations
 
 - LBPH works best with frontal faces in consistent lighting
 - Large pose changes (side profile) may not be recognized
@@ -227,7 +227,7 @@ See `attendance_notebook.ipynb` for full accuracy analysis and per-student break
 
 ---
 
-## 🔮 Extensions
+## Extensions
 
 - Replace LBPH with dlib 128-d embeddings or FaceNet for higher accuracy
 - Add MTCNN for better detection in crowded classrooms
@@ -236,7 +236,7 @@ See `attendance_notebook.ipynb` for full accuracy analysis and per-student break
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Python 3.10**
 - **OpenCV + opencv-contrib** — face detection + LBPH recognition
