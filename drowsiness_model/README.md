@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 Driver/passenger drowsiness causes thousands of road accidents annually. This system uses computer vision to:
 
