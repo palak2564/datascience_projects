@@ -1,0 +1,29 @@
+# Nationality Detection System — Dependencies
+# =============================================
+# Install: pip install -r requirements.txt
+# Python 3.8+
+
+# Core ML / face analysis
+deepface>=0.0.80          # nationality + emotion + age (main model)
+tf-keras>=2.15.0          # DeepFace dependency
+
+# Computer vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+
+# Clustering (dress colour)
+scikit-learn>=1.3.0
+
+# Image handling
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# GUI (tkinter is built-in to Python — no install needed)
+
+# Notebook / analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+
+# Testing
+pytest>=7.4.0

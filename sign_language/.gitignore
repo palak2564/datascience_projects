@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Models
+models/*.h5
+models/*.pkl
+models/*.onnx
+
+# Dataset (large)
+dataset/train/
+dataset/val/
+dataset/test/
+!dataset/.gitkeep
+
+# Outputs
+outputs/
+*.log
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Models (large — regenerate with download_models.py)
+models/*.caffemodel
+models/*.h5
+
+# DeepFace cache
+~/.deepface/
+
+# Outputs
+outputs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
