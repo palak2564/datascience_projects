@@ -1,22 +1,22 @@
-# 🤟 Sign Language Detection System
+# Sign Language Detection System
 
-> **Internship Project Extension** — Real-time ASL sign language recognition using MediaPipe hand landmarks + neural network. Supports image upload and live webcam. Active 6:00 PM – 10:00 PM only.
+> **Real-time ASL sign language recognition using MediaPipe hand landmarks + neural network. Supports image upload and live webcam. Active 6:00 PM – 10:00 PM only.
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 Build a system that recognises hand signs in real-time, identifies known ASL words/letters, and operates within a restricted time window.
 
 **Labels recognised (36 total):**
-- 🔤 A–Z (26 ASL alphabet letters)
-- 💬 10 custom words: `Hello`, `ThankYou`, `Yes`, `No`, `Please`, `Sorry`, `Help`, `Eat`, `Water`, `More`
+- A–Z (26 ASL alphabet letters)
+- 10 custom words: `Hello`, `ThankYou`, `Yes`, `No`, `Please`, `Sorry`, `Help`, `Eat`, `Water`, `More`
 
 **Operating hours:** 6:00 PM – 10:00 PM (configurable in `config.py`)
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 sign_language/
@@ -53,7 +53,7 @@ sign_language/
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ```bash
 pip install -r requirements.txt
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📸 Step 1: Get Training Data
+## Step 1: Get Training Data
 
 **Option A — Kaggle ASL Alphabet Dataset (recommended):**
 ```bash
@@ -78,7 +78,7 @@ python train.py --capture
 
 ---
 
-## 🏋️ Step 2: Train the Model
+## Step 2: Train the Model
 
 ```bash
 python train.py
@@ -94,7 +94,7 @@ Saves to `models/`:
 
 ---
 
-## 🖥 Step 3: Run the App
+## Step 3: Run the App
 
 ```bash
 python app.py
@@ -123,7 +123,7 @@ python cli.py --image hand.jpg --csv log.csv
 
 ---
 
-## ⏰ Time Window
+## Time Window
 
 The system **only accepts input between 6:00 PM and 10:00 PM**.
 
@@ -145,7 +145,7 @@ ACTIVE_END   = dtime(23, 59)  # always active
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### Stage 1: Hand Detection — MediaPipe
 MediaPipe Hands detects the hand and returns 21 3D landmarks (x, y, z coordinates).
@@ -182,7 +182,7 @@ Fallback: **SVM with RBF kernel** if TensorFlow not available.
 
 ---
 
-## 📊 Datasets
+## Datasets
 
 | Component | Dataset |
 |---|---|
@@ -192,7 +192,7 @@ Fallback: **SVM with RBF kernel** if TensorFlow not available.
 
 ---
 
-## ⚠ Limitations
+## Limitations
 
 - Only frontal/near-frontal hand poses work well
 - Two-handed signs not supported (single hand only)
@@ -201,7 +201,7 @@ Fallback: **SVM with RBF kernel** if TensorFlow not available.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Python 3.10**
 - **MediaPipe** — hand landmark detection
